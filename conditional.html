@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    
+</head>
+<body style="height: 84vh;">
+   <section id="section"  class=" shadow-lg col-lg-12 col-md-12 col-sm-12 rounded-2" >
+    <h1 class="pt-5 mytext" style="text-align: center;">Grading System</h1>
+   <div class="col-lg-12 col-md-12 col-sm-12">
+    <input type="number" placeholder="Enter Your Score"  id="input">
+   </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <button onclick="checkGrade()" class="btn  mt-3" id="btn">Grade</button>
+    </div>
+    <p id="result" style="color: pink; font-size: 60px;"></p>
+   </section>
+    <script>
+        function checkGrade() {
+            var score = input.value
+            if(score<40){
+                result.innerText="F"
+            }else if(score>=40&&score<45){
+                result.innerText="E"
+            }else if(score>=45&&score<=49){
+                result.innerText="D"
+            }else if(score>=50&&score<=59){
+                result.innerText="C"
+            }else if(score>=60&&score<=69){
+                result.innerText="B"
+            }else if(score>=70&&score<=100){
+                result.innerText="A"
+            }
+
+        }
+    </script>
+</body>
+</html>
